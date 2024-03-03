@@ -1,10 +1,11 @@
 const express = require("express");
+require("dotenv").config();
 const productData = require("./routes/api/product");
 const userData = require("./routes/api/user");
 const photoData = require("./routes/api/photos");
 const cors = require("cors");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 
